@@ -1,10 +1,11 @@
 """
 Author: Pruthvi Suryadevara
 Email:  pruthvi.suryadevara@tifr.res.in
-Simple code adding keyword arguments
+Simple code adding arbitary keyword arguments
 
 """
-def adder(good=1,bad=2,ugly=3):
-    return(good+bad+ugly)
+def adder(**arg):
+    print(arg)     
+    return(sum(arg.values()))
 
-print(adder(ugly=1,good=5))
+print(adder(first=1,secodn=3,third=5))
